@@ -5,21 +5,21 @@ export default class HolbertonCourse {
     this._students = this._validateStudents(students);
   }
 
-  _validateName(value) {
+  static _validateName(value) {
     if (typeof value !== 'string') {
       throw new TypeError('Name must be a string');
     }
     return value;
   }
 
-  _validateLength(value) {
+  static _validateLength(value) {
     if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
     }
     return value;
   }
 
-  _validateStudents(value) {
+  static _validateStudents(value) {
     if (!Array.isArray(value) || !value.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
