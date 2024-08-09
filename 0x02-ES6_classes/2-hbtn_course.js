@@ -13,8 +13,8 @@ export default class HolbertonCourse {
     return value;
   }
 
-   /* eslint-disable-next-line class-methods-use-this */
-   _validateLength(value) {
+  /* eslint-disable-next-line class-methods-use-this */
+  _validateLength(value) {
     if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
     }
